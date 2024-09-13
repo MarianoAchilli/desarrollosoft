@@ -28,3 +28,7 @@ else:
           print (f"Su pizza es vegetariana y contiene: {ingredientes_base} y pimiento.")
         elif ingrediente==2:
             print (f"Su pizza es vegetariana y contiene: {ingredientes_base} y tofu.")
+
+
+# USAR TRY EXCEPT
+# CREAR PRUEBA DE ESCRITORIO
