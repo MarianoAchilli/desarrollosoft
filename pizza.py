@@ -6,23 +6,37 @@
 # Solo se puede elegir un ingrediente además de la mozzarella y el tomate que están en todas las pizzas. 
 # Al final se debe mostrar por pantalla si la pizza elegida es vegetariana o no y todos los ingredientes que lleva.
 
-print (" 1. No - 2. Si")
-pizza=int(input("¿Quiere una pizza vegetariana? "))
+ingredientes_base="Mozzarella, tomate"
 
-if pizza==1:
-    print ("Los ingredientes disponibles son: 1. Peperoni, 2. Jamón, 3. Salmón.")
-    ingrediente=int(input("Seleccione su ingrediente: "))
-    if ingrediente==1:
-        print ("Su pizza no es vegetariana y contiene: Mozzarella, tomate y peperoni.")
-    elif ingrediente==2:
-        print ("Su pizza no es vegetariana y contiene: Mozzarella, tomate y jamón.")
-    elif ingrediente==3:
-        print ("Su pizza no es vegetariana y contiene: Mozzarella, tomate y jamón.")
-else: 
-    if pizza==2:
-        print ("Los ingredientes disponibles son: 1. Pimiento, 2. Tofu.")
+try:
+
+    print ("1. No - 2. Si")
+    pizza=int(input("¿Quiere una pizza vegetariana? "))
+
+    if pizza==1:
+        print ("La pizza contiene como ingredientes base mozzarella y tomate. Las opciones extras son: 1. Peperoni, 2. Jamón, 3. Salmón.")
+        ingrediente=int(input("Seleccione su ingrediente: "))
+        if ingrediente==1:
+            print (f"Su pizza no es vegetariana y contiene: {ingredientes_base} y peperoni.")
+        elif ingrediente==2:
+            print (f"Su pizza no es vegetariana y contiene: {ingredientes_base} y jamón.")
+        elif ingrediente==3:
+            print (f"Su pizza no es vegetariana y contiene: {ingredientes_base} y salmón.")
+        else:
+            raise ValueError("Opción de ingrediente inválida. Por favor, ingrese 1, 2 o 3.")
+    elif pizza==2:
+        print ("La pizza contiene como ingredientes base mozzarella y tomate. Las opciones extras son: 1. Pimiento, 2. Tofu.")
         ingrediente=int(input("Seleccione un ingrediente: "))
         if ingrediente==1:
-          print ("Su pizza es vegetariana y contiene: Mozzarella, tomate y pimiento.")
+            print (f"Su pizza es vegetariana y contiene: {ingredientes_base} y pimiento.")
         elif ingrediente==2:
-            print ("Su pizza es vegetariana y contiene: Mozzarella, tomate y tofu.")
+            print (f"Su pizza es vegetariana y contiene: {ingredientes_base} y tofu.")
+        else:
+            raise ValueError ("Opción de ingrediente inválida. Por favor, ingrese 1 o 2.")
+    else:
+        raise ValueError ("Opción de tipo de pizza inválida. Por favor, ingrese 1 o 2.")
+
+except ValueError as e:
+    print(f"ERROR: {e}")
+
+# CREAR PRUEBA DE ESCRITORIO
