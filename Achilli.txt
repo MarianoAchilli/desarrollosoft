@@ -1,0 +1,13 @@
+ACHILLI MARIANO
+ Desarrolla un algoritmo que evalúe si un estudiante ha regulado, reprobado o promocionado la materia en función de sus notas y asistencia.
+Criterios:
+1.	Notas:
+o	La nota final del estudiante es el promedio de tres exámenes.
+o	La nota mínima para aprobar es 6.
+2.	Asistencia:
+o	El estudiante debe haber asistido al menos al 75% de las clases para ser considerado para aprobación.
+Criterios para Evaluar al Estudiante:
+o	Si el promedio es 6 o más y cumple con la asistencia, regulo la materia.
+o	Si el promedio es menor a 6 y cumple con la asistencia, reprobó la materia
+o	Si no cumple con la asistencia, quedo libre de la materia sin importar las calificaciones.
+o	Si el estudiante tiene 8 o más de promedio y cumple con la asistencia, promociono la materia.
